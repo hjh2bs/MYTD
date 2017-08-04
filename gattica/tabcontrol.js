@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     $('#warning1').hide();
 
     chrome.runtime.getBackgroundPage(function(bg){
-
+        //Grab initial values from tabbackground.js
+        //**add functionality to grab values from storage
         $('#enableMYTD').prop('checked', bg.enable);
         $('#tablimit').val(bg.maxTab);
 

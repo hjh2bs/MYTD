@@ -1,8 +1,8 @@
 
 
 
-var enable = false;
-var maxTab = 10;
+var enable = true;
+var maxTab = 50;
 
 function setEnable(bool){
     enable = bool;
@@ -12,6 +12,8 @@ function setMax(num){
     maxTab = num;
 }
 
+
+//runs when tabs are created
 chrome.tabs.onCreated.addListener(function(){
 
     if(enable){
