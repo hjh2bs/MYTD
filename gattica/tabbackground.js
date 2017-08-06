@@ -30,6 +30,8 @@ storage.get('mytd_max_tab', function(value){
 
 
 
+
+
 function setEnable(bool){
     enable = bool;
     storage.set({'mytd_tab_enabled':bool}, function(){
