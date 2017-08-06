@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     $('#warning1').hide();
 
+    //**add functionality to get all tabs, then organize tabs
+    //based on url
+
     chrome.runtime.getBackgroundPage(function(bg){
         //Grab initial values from tabbackground.js
         //**add functionality to grab values from storage
