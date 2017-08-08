@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         console.log(website_count);
 
-
+        //Input the count into a graph
 
 
     });
