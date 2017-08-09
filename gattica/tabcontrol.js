@@ -1,30 +1,7 @@
 //Script that runs whenever tabcontrol.html is loaded
 
 //parameterize this data
-function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-    ["Website", "Number" ],
-    ["Youtube", 3],
-    ["Facebook", 1],
-    ["Reddit", 5],
-    ["Mangastream", 2]
-    ]);
 
-    var options = {
-        title: "Density of Precious Metals, in g/cm^3",
-        width: 600,
-        height: 400,
-        bar: {groupWidth: "10%"},
-        legend: { position: "none" },
-        hAxis: {
-          minValue: 0,
-          format: '0'
-        }
-    };
-    var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
-    chart.draw(data, options);
-
-}
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -65,8 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(website_count);
 
         //Input the count into a graph
-        google.charts.load("current", {packages:["corechart"]});
-        google.charts.setOnLoadCallback(drawChart);
+
         
 
     });
