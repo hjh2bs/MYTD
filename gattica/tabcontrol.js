@@ -41,39 +41,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         console.log(website_count);
 
+        var sites = [];
+        var sites_count = [];
+
+        for (index in website_count){
+            sites.push(index);
+            sites_count.push(website_count[index]);
+        }
+        console.log(sites);
+        console.log(sites_count);
+
         //Input the count into a graph
         var ctx = document.getElementById("myChart").getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'horizontalBar',
             data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: sites,
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-                ],
+                label: 'Open Tabs',
+                data: sites_count,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor:'rgba(75, 192, 192, 1)',
                 borderWidth: 1
-            }]
+            }],
+
         },
         options: {
             scales: {
                 yAxes: [{
+                    categoryPercentage: .4,
+                    barPercentage: .4
+
+                }],
+                xAxes: [{
                     ticks: {
-                        beginAtZero:true
+                        beginAtZero:true,
+                        
                     }
                 }]
             }
