@@ -6,8 +6,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     chrome.tabs.query({currentWindow: true}, function(tabs){
-        var tabcount = tabs.length;
-        $('#count').html("Number of tabs open: " + tabcount);
+        //var tabcount = tabs.length;
+        //$('#count').html("Number of tabs open: " + tabcount);
 
         //**add functionality to get all tabs, then organize tabs
         //based on url
