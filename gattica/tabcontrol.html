@@ -7,6 +7,7 @@
 <html>
 <head>
     <title>Tab Options</title>
+    <link rel="stylesheet" href="spectre.css" />
     <style>
         body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
@@ -36,10 +37,17 @@
 <canvas id="myChart" width="400" height="400"></canvas>
 <!--<div id="status"></div>-->
 <!--<p id = "count"></p>-->
-<input type="checkbox" name="tabEnable" id = "enableMYTD">Enable<br>
+<!--<input type="checkbox" name="tabEnable" id = "enableMYTD">Enable<br>-->
 <br>
-<form id='form1'>Tab Limit: <input type='text' id = 'tablimit' size='5'></form>
-<p id = "warning1">Please enter a valid numeral</p>
+<div class="form-group" style="text-align:center;">
+    <label class="form-switch">
+        <input type="checkbox" name="tabEnable" id="enableMYTD"/>
+        <i class="form-icon"></i>
+    </label>
+</div>
+<br>
+<form id='form1' style="text-align:center;">Tab Limit: <input type='text' id = 'tablimit' size='5'></form>
+<p id = "warning1">Please enter a valid numeral</p><br>
 </body>
 </html>
 
